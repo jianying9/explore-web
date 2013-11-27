@@ -16,12 +16,7 @@ $.yyLoadListener('explore-login', {
                 var registerForm = yy.findInModule('register-form');
                 var msg = registerForm.getData();
                 msg.act = 'REGISTER';
-//                registerForm.sendMessage(msg);
-                msg.flag = 'SUCCESS';
-                var data = {
-                    userName: msg.userName
-                };
-                msg.data = data;
+                registerForm.sendMessage(msg);
                 $.yySendLocal(msg);
             }
         },
@@ -42,15 +37,7 @@ $.yyLoadListener('explore-login', {
                 var loginForm = yy.findInModule('login-form');
                 var msg = loginForm.getData();
                 msg.act = 'LOGIN';
-//                registerForm.sendMessage(msg);
-                msg.flag = 'SUCCESS';
-                var data = {
-                    userName: 'aladdin',
-                    userId: 1,
-                    userEmail: 'aladdin@91y.com'
-                };
-                msg.data = data;
-                $.yySendLocal(msg);
+                loginForm.sendMessage(msg);
             }
         },
         toRegisterListener: {
@@ -89,7 +76,7 @@ $.yyLoadListener('explore-login', {
                 if (message.flag === 'SUCCESS') {
                     var data = message.data;
                     yy.setSession({
-                        loginNickName: data.userName,
+                        loginNickName: data.nickName,
                         loginUserId: data.userId,
                         loginUserEmail: data.userEmail
                     });

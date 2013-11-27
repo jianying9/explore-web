@@ -6,7 +6,7 @@ body, div, input, textarea {
 }
 
 img {
-    border-width: 0px;
+    border-width: 0;
 }
 
 input, textarea {
@@ -14,13 +14,12 @@ input, textarea {
     resize: none;
     overflow: hidden;
     background-color: white;
-    margin: 0em;
+    margin: 0;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
-    text-indent: 0px;
+    text-indent: 0;
     text-shadow: none;
-    text-align: start;
 }
 
 input {
@@ -222,6 +221,7 @@ body {
     background-color: #d0d0d0;
     background-image: url("images/bg_grid.png");
     background-repeat: repeat;
+    padding-bottom: 10px;
 }
 
 .explore_content_panel {
@@ -342,16 +342,6 @@ body {
     float: right;
 }
 
-.sendcloud {
-    background-image: url("images/sendcloud.png");
-    background-repeat: no-repeat;
-}
-
-.rtb1 {
-    background-image: url("images/rtb1.jpg");
-    background-repeat: no-repeat;
-}
-
 .item {
     padding: 6px 10px;
     font-size: 12px;
@@ -386,4 +376,8 @@ body {
     width: 630px;
     height: 320px;
     margin: 0 auto;
+}
+
+.main_position_list > .yy_list_item{
+    cursor: pointer;
 }
