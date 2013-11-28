@@ -378,6 +378,6 @@ body {
     margin: 0 auto;
 }
 
-.main_position_list > .yy_list_item{
+.position_ad {
     cursor: pointer;
 }

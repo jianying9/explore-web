@@ -21,7 +21,7 @@ $.yyLoadListener('explore-main', {
                             + '<div class="yy_ignore box">'
                             + '<div class="box_header">' + data.positionName + '</div>'
                             + '<div class="yy_ignore box_content">'
-                            + '<canvas class="yy_image" id="' + data.positionId + '-position" yyHeight="250" yyWidth="250" yyMessageListener="explore-main.positionMessageListener" yyEventListener="explore-main.positionListener"></canvas>'
+                            + '<canvas class="yy_image position_ad" id="' + data.positionId + '-position" yyHeight="250" yyWidth="250" yyMessageListener="explore-main.positionMessageListener" yyEventListener="explore-main.positionListener"></canvas>'
                             + '</div>'
                             + '</div>';
                     return result;
@@ -97,14 +97,12 @@ $.yyLoadListener('explore-main', {
                     }
                     window.open(url);
                     //记录点击
-                    var listItem = yy.group;
-                    var itemData = listItem.getData();
                     var msg = {
                         server: 'rtbServer',
                         act: 'CLICK_AD',
-                        positionId: itemData.positionId,
-                        adId: itemData.adId,
-                        bid: itemData.bid
+                        positionId: data.positionId,
+                        adId: data.adId,
+                        bid: data.bid
                     };
                     yy.sendMessage(msg);
                 }
